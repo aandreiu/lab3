@@ -9,13 +9,14 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$("#testjs").click(function(e) {
-		$('.jumbotron h1').text("You are amazing!");
+	 $("#testjs").click(function(e) {
+		 $('.jumbotron h1').text("You are amazing!");
 			 $(".jumbotron p").toggleClass("active");
-	});
-	$("a.thumbnail").click(projectClick);
-
+	 });
+	 $("a.thumbnail").click(projectClick);
+}
 function projectClick(e) {
+	 console.log("Project clicked");
 	 e.preventDefault();
 	 	 var containingProject = $(this).closest(".project");
 	 	 var description = $(containingProject).find(".project-description");
@@ -24,7 +25,7 @@ function projectClick(e) {
 	 	 } else {
 			 $(".project").fadeOut();
 	 }
+ // Add any additional listeners here
+ // example: $("#div-id").click(functionToCall);
  }
-	// Add any additional listeners here
-	// example: $("#div-id").click(functionToCall);
-}
+
